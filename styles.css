@@ -1,0 +1,26 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+}
+
+.col {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+body {
+    background-color: #333;
+}
+
+.btn-movies {
+    color: white;
+    background-color: black;
+    padding: 1em 1em;
+}
