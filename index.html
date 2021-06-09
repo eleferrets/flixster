@@ -12,20 +12,29 @@
 
 <body>
     <nav class="topnav">
-        <h2 class="title"><img src="popcorn.png" alt="A popcorn icon">Flixster
-            <!-- <input type="text" placeholder="Search.."> -->
+        <h2 class="title"><img src="popcorn.png" alt="A popcorn icon"> Flixster
+            <form>
+                <input type="text" name="movies" placeholder="Search..." required>
+            </form>
         </h2>
     </nav>
+
     <main>
+        <h2>Now Playing</h2>
         <div class="col gallery">
-            <p class="gallery-text">Now Playing</p>
+
         </div>
+
+        <div class="hidden movie-contents">
+            <form><button class="btn-return">Close</button></form>
+            <div></div>
+        </div>
+
         <div class="btn">
-            <button type="button" class="btn-movies">Show more movies</button>
-
+            <form><button class="btn-movies">Load more movies</button></form>
         </div>
-
     </main>
+    <script src="script.js"></script>
 </body>
 
 </html>
