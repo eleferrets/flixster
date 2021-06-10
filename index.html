@@ -13,16 +13,22 @@
 <body>
     <nav class="topnav">
         <h2 class="title"><img src="popcorn.png" alt="A popcorn icon"> Flixster
+            <span class="search">
             <form>
-                <input type="text" name="movies" placeholder="Search..." required>
-            </form>
+                <input type="search" name="movies" id="movie-search" placeholder="Search...">
+                <!-- <button>Search Giphy!</button> -->
+            </form></span>
         </h2>
     </nav>
 
     <main>
         <h2>Now Playing</h2>
 
-        <div class="col gallery">
+        <div class="col gallery hidden">
+
+        </div>
+
+        <div class="col search-gallery hidden">
 
         </div>
 
@@ -33,7 +39,7 @@
         </div>
 
         <div class="btn">
-            <form><button class="btn-movies">Load more movies</button></form>
+            <form><button class="hidden btn-movies">Load more movies</button></form>
         </div>
     </main>
     <script src="script.js"></script>

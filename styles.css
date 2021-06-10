@@ -39,6 +39,10 @@ padding: 14px;
 }
 */
 
+.search {
+    display: inline-block;
+}
+
 img {
     height: 50px;
 }
@@ -67,8 +71,8 @@ body {
     text-align: center;
 }
 
-main div p {
-    padding-top: 10em;
+main h2 {
+    padding-top: 2.5em;
 }
 
 .btn-movies {
