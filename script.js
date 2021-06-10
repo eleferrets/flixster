@@ -2,7 +2,7 @@ const searchForm = document.querySelector("form");
 const btnForm = document.querySelector(".btn-movies");
 const moviesInput = document.querySelector("#gif");
 const gallery = document.querySelector(".gallery");
-const moreResults = document.querySelector("#more-btn");
+const moreResults = document.querySelector(".btn-movies");
 
 const limit = 9;
 const rating = "g";
@@ -18,9 +18,9 @@ var data = "";
 //     moreResults.classList.remove("hidden");
 //     getResults(evt);
 // });
-// moreResults.addEventListener("click", (evt) => {
-//     showMore(evt);
-// });
+moreResults.addEventListener("click", (evt) => {
+    showMore(evt);
+});
 
 
 
@@ -40,19 +40,17 @@ var data = "";
 //     evt.target.gif.value = "";
 
 // }
-// async function showMore(evt) {
-//     evt.preventDefault();
-//     pages += 1;
-//     offset = pages * limit;
-//     movieUrl = `
-//https: api.themoviedb.org / 3 / movie / 550 ? api_key = $ { apiKey }`;
-//     console.log(movieUrl);
-//     response = await fetch(movieUrl);
-//     jsonResponse = await response.json();
-//     data = jsonResponse.data;
-//     displayResults(data);
+async function showMore(evt) {
+    evt.preventDefault();
+    pages += 1;
+    //offset = pages * limit;
+    //movieUrl = `https: api.themoviedb.org / 3 / movie / 550 ? api_key = $ { apiKey }`;
+    movieUrl = `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US&page=${pages}`;
+    //console.log(movieUrl);
+    data = await getResponse(movieUrl);
+    displayResults(data);
 
-// }
+}
 
 // function getResults(evt) {
 //     evt.preventDefault();
@@ -74,10 +72,15 @@ window.onload = async function() {
     pages += 1;
     movieUrl = `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US&page=${pages}`
     console.log(pages);
-    response = await fetch(movieUrl);
-    jsonResponse = await response.json();
-    data = jsonResponse.results;
+    data = await getResponse(movieUrl);
     console.log(data);
     displayResults(data);
 
+}
+
+async function getResponse(movieUrl) {
+    response = await fetch(movieUrl);
+    jsonResponse = await response.json();
+    data = jsonResponse.results;
+    return data;
 }
