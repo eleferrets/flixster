@@ -22,7 +22,6 @@ var hasInput;
 
 searchForm.addEventListener("submit", (evt) => {
     evt.preventDefault();
-    // search.addEventListener("search", (evt) => {
     const value = search.value.trim();
     if (value == '')
         hasInput = false;
@@ -39,55 +38,36 @@ searchForm.addEventListener("submit", (evt) => {
         searchGallery.classList.add("hidden");
         gallery.classList.remove("hidden");
         moreResults.classList.remove("hidden");
-        //window.onload();
+
     }
 });
-// });
 
 moreResults.addEventListener("click", (evt) => {
     showMore(evt);
 });
 
 async function handleSearch(evt) {
+    // Get a search result without whitespace and display the data in the search results
     query = search.value.trim();
     var searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&query=${query}&page=1&include_adult=false`;
     data = await getResponse(searchUrl);
     displaySearchResults(data);
 }
 
-// async function handleFormSubmit(evt) {
-//     query = evt.target.gif.value;
-//     // const apiURL = "https://api.themoviedb.org/3/search/movie?api_key=" + apiKey + "&language=en-US&query=" + input + "&page=1&include_adult=false"
-//     //`https://api.themoviedb.org/3/movie/550?api_key=${apiKey}`;
-//     movieUrl = `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US&page=${pages}`
-//         //pages += 1;
-//     response = await fetch(movieUrl);
-//     jsonResponse = await response.json();
-//     data = jsonResponse.data;
-//    
-//     // Extract data using data[0].images.original.url
-//     displayResults(data);
-//     evt.target.gif.value = "";
-
 // }
 async function showMore(evt) {
+    // For the button, add the current page and display results
     evt.preventDefault();
     pages += 1;
-    //offset = pages * limit;
-    //movieUrl = `https: api.themoviedb.org / 3 / movie / 550 ? api_key = $ { apiKey }`;
     movieUrl = `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US&page=${pages}`;
     data = await getResponse(movieUrl);
     displayResults(data);
 
 }
 
-// function getResults(evt) {
-//     evt.preventDefault();
-//     gifResults.innerHTML = "";
-//     handleFormSubmit(evt);
-// }
 
 function displayResults(data) {
+    // Pass in each sub object and display them
     data.forEach(el => {
         gallery.innerHTML += generateHTML(el, el.id);
 
@@ -95,6 +75,7 @@ function displayResults(data) {
 }
 
 function displaySearchResults(data) {
+    // Pass in each sub object and display them
     data.forEach(el => {
         searchGallery.innerHTML += generateHTML(el, el.id);
 
@@ -137,3 +118,4 @@ function generateHTML(el, id) {
         </div>`
 }
 // What you need to do
+//Make the popup for each object.
