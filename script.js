@@ -7,7 +7,8 @@ const searchGallery = document.querySelector(".search-gallery");
 const moreResults = document.querySelector(".btn-movies");
 const movieContents = document.querySelector(".movie-contents");
 const returnButton = document.querySelector(".btn-return");
-
+/* Get the key outta here during commits */
+const apiKey = "8ae472f9540ff81c2afe402c3afea0bb";
 const limit = 9;
 const rating = "g";
 var pages = 0;
@@ -136,8 +137,3 @@ function generateHTML(el, id) {
         </div>`
 }
 // What you need to do
-// Work on searching, maybe have the div be hidden and another div for searching be active
-// Grid view using css grid
-// We need title, poster image, a votes thing, and a star for the votes
-// Font sizing
-// Responsive to at least two different screen sizes
