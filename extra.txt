@@ -63,3 +63,42 @@ padding: 14px;
 /* .movie-item:hover {
     box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 } */
+                <!-- Trigger/Open The Modal -->
+                <!-- <button id="myBtn">Open Modal</button> -->
+                            <!-- <form><button class="btn-return">Close</button></form> -->
+                                            <!-- <button>Search Giphy!</button> -->
+                                                    <!-- <img src="popcorn.png" alt="A popcorn icon"> -->
+                                                    
+/* .above {
+    background-color: antiquewhite;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+} */
+   //console.log(data);
+   // returnButton.addEventListener("click", (evt) => {
+//     evt.preventDefault();
+//     movieContents.classList.add("hidden");
+// });
+// const moviesInput = document.querySelector("#gif");
+    //console.log(id);
+    //actualContents.innerHTML = "";
+        //console.log(spana);
+                //data = jsonResponse.results;
+        //console.log(jsonResponse);
+                //console.log(jsonResponse2);
+                        //console.log(jr2.results[0].id);
+                            // actualContents.innerHTML +=
+    //     `<div>
+
+    //     </div>`
+            //modal.style.display = "none";
+        //spana.onclick = function() {
+        //  console.log("Hi!");
+        // modal.style.display = "none";
+        // }​;
+
+        // When the user clicks the button, open the modal 
+// btn.onclick = function() {
+//     modal.style.display = "block";
+// }
