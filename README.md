@@ -4,7 +4,7 @@ Submitted by: **Brian Balthazar**
 
 Estimated time spent: **8** hours spent in total
 
-Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
+Deployed Application (optional): [Flixster Deployed Site](https://eleferrets.github.io/flixster/)
 
 ### Application Features
 
