@@ -139,8 +139,6 @@ function generateHTML(el, id) {
         </div>`
 }
 // What you need to do
-//$ { U + 2 B50 }
-//<img src = "star.png" alt = "Voting star">
 // Work on searching, maybe have the div be hidden and another div for searching be active
 // Grid view using css grid
 // We need title, poster image, a votes thing, and a star for the votes
