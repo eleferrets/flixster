@@ -2,7 +2,7 @@
 
 Submitted by: **Brian Balthazar**
 
-Estimated time spent: **4** hours spent in total
+Estimated time spent: **5** hours spent in total
 
 Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
@@ -13,8 +13,8 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 - [ ] User can view a list of current movies from The Movie Database API as a grid view.
 - [ ] For each movie displayed, user can see the following details: `Title`, `Poster Image`, `Votes`.
 - [x] User can load more current movies by clicking a button at the bottom of the list. The page should not refresh; movies should simply be added to the bottom.
-- [ ] Allow users to search for movies and display them in a grid view. Users should be able to clear results and view previous current movies displayed.
-- [ ] Website accounts for basic HTML/CSS accessibility features.
+- [x] Allow users to search for movies and display them in a grid view. Users should be able to clear results and view previous current movies displayed.
+- [x] Website accounts for basic HTML/CSS accessibility features.
 - [ ] Website should be responsive.
 
 #### STRETCH FEATURES

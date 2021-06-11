@@ -5,6 +5,8 @@ const btnForm = document.querySelector(".btn-movies");
 const gallery = document.querySelector(".gallery");
 const searchGallery = document.querySelector(".search-gallery");
 const moreResults = document.querySelector(".btn-movies");
+const movieContents = document.querySelector(".movie-contents");
+const returnButton = document.querySelector(".btn-return");
 
 const limit = 9;
 const rating = "g";
@@ -24,17 +26,18 @@ searchForm.addEventListener("submit", (evt) => {
     evt.preventDefault();
     // search.addEventListener("search", (evt) => {
     const value = search.value.trim();
-    console.log(value);
     if (value == '')
         hasInput = false;
     else hasInput = true;
     if (hasInput) {
+        // We have input, so show the search results
         searchGallery.innerHTML = "";
         searchGallery.classList.remove("hidden");
         gallery.classList.add("hidden");
         moreResults.classList.add("hidden");
         handleSearch(evt);
     } else {
+        // Show the top movies instead
         searchGallery.classList.add("hidden");
         gallery.classList.remove("hidden");
         moreResults.classList.remove("hidden");
@@ -63,7 +66,7 @@ async function handleSearch(evt) {
 //     response = await fetch(movieUrl);
 //     jsonResponse = await response.json();
 //     data = jsonResponse.data;
-//     console.log(data);
+//    
 //     // Extract data using data[0].images.original.url
 //     displayResults(data);
 //     evt.target.gif.value = "";
@@ -75,7 +78,6 @@ async function showMore(evt) {
     //offset = pages * limit;
     //movieUrl = `https: api.themoviedb.org / 3 / movie / 550 ? api_key = $ { apiKey }`;
     movieUrl = `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US&page=${pages}`;
-    //console.log(movieUrl);
     data = await getResponse(movieUrl);
     displayResults(data);
 
@@ -89,20 +91,14 @@ async function showMore(evt) {
 
 function displayResults(data) {
     data.forEach(el => {
-        gallery.innerHTML += ` <div class="movie-item">
-                <img src="https://image.tmdb.org/t/p/w500/${el.poster_path}" alt="Gif of ${el.original_title}" class="movie-img">
-                <p class="movie-title">${el.title}</p>
-                </div>`
+        gallery.innerHTML += generateHTML(el, el.id);
 
     });
 }
 
 function displaySearchResults(data) {
     data.forEach(el => {
-        searchGallery.innerHTML += ` <div class="movie-item">
-                <img src="https://image.tmdb.org/t/p/w500/${el.poster_path}" alt="Gif of ${el.original_title}" class="movie-img">
-                <p class="movie-title">${el.title}</p>
-                </div>`
+        searchGallery.innerHTML += generateHTML(el);
 
     });
 }
@@ -113,7 +109,6 @@ window.onload = async function() {
     gallery.innerHTML = "";
     pages += 1;
     movieUrl = `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US&page=${pages}`
-        //console.log(pages);
     data = await getResponse(movieUrl);
     console.log(data);
     displayResults(data);
@@ -121,16 +116,33 @@ window.onload = async function() {
 }
 
 async function getResponse(movieUrl) {
+    // This is the function you need to make external api calls.
+    // If the data is wrapped around something, you need to extract the data further.
     response = await fetch(movieUrl);
     jsonResponse = await response.json();
     data = jsonResponse.results;
     return data;
 }
 
+function displayMovie(el) {
+    console.log(el);
+    // movieContents.classList.remove(hidden);
+    // movieContents.innerHTML +=
+    //     `<form><button class="btn-return">Close</button></form>
+    //     <div></div>`
+}
+
+function generateHTML(el, id) {
+    return ` <div class = "movie-item popup" onclick = "displayMovie(${id})">
+        <img src = "https://image.tmdb.org/t/p/w500/${el.poster_path}" alt = "Gif of ${el.original_title}" class = "movie-img">
+        <div> <span><p>⭐${el.vote_average} </p></span> <p class = "movie-title" >${el.title} </p> </div>
+        </div>`
+}
 // What you need to do
+//$ { U + 2 B50 }
+//<img src = "star.png" alt = "Voting star">
 // Work on searching, maybe have the div be hidden and another div for searching be active
 // Grid view using css grid
 // We need title, poster image, a votes thing, and a star for the votes
 // Font sizing
-// Responsive to at least two different screen sizes
 // Responsive to at least two different screen sizes
