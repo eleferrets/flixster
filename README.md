@@ -2,8 +2,7 @@
 
 Submitted by: **Brian Balthazar**
 
-Estimated time spent: **8** hours spent in total
-
+Estimated time spent: **11** hours spent in total
 Deployed Application (optional): [Flixster Deployed Site](https://eleferrets.github.io/flixster/)
 
 ### Application Features
@@ -29,7 +28,7 @@ Deployed Application (optional): [Flixster Deployed Site](https://eleferrets.git
 
 `TODO://` Add the URL to your animated app walkthough `gif` in the image tag below, `YOUR_GIF_URL_HERE`. Make sure the gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after after adding gif)
 
-<img src="YOUR_GIF_URL_HERE" width=250><br>
+<img src="https://media.giphy.com/media/rL5U1KymMEXkJJsnx3/giphy.gif" width=250><br>
 
 ### Reflection
 
