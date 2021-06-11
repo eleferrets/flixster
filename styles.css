@@ -62,14 +62,6 @@ main h2 {
     display: none !important;
 }
 
-
-/* .above {
-    background-color: antiquewhite;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-} */
-
 .movie-img {
     width: 12.5em;
     height: auto;

@@ -1,7 +1,6 @@
 const searchForm = document.querySelector("form");
 const search = document.querySelector("#movie-search");
 const btnForm = document.querySelector(".btn-movies");
-// const moviesInput = document.querySelector("#gif");
 const gallery = document.querySelector(".gallery");
 const searchGallery = document.querySelector(".search-gallery");
 const moreResults = document.querySelector(".btn-movies");
@@ -48,10 +47,6 @@ searchForm.addEventListener("submit", (evt) => {
 moreResults.addEventListener("click", (evt) => {
     showMore(evt);
 });
-// returnButton.addEventListener("click", (evt) => {
-//     evt.preventDefault();
-//     movieContents.classList.add("hidden");
-// });
 
 async function handleSearch(evt) {
     // Get a search result without whitespace and display the data in the search results
@@ -96,7 +91,6 @@ window.onload = async function() {
     pages += 1;
     movieUrl = `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US&page=${pages}`
     data = await getResponse(movieUrl);
-    //console.log(data);
     displayResults(data);
 
 }
@@ -111,8 +105,6 @@ async function getResponse(movieUrl) {
 }
 
 async function displayMovie(id) {
-    //console.log(id);
-    //actualContents.innerHTML = "";
     movieContents.classList.remove("hidden");
 
     modal.style.display = "block";
@@ -120,18 +112,13 @@ async function displayMovie(id) {
     response = await fetch(url);
     jsonResponse = await response.json();
     let spana = document.getElementsByClassName("close");
-    //console.log(spana);
-    if (spana.length > 0) {
 
-        //data = jsonResponse.results;
-        //console.log(jsonResponse);
+    if (spana.length > 0) {
         var jr = jsonResponse;
         var url2 = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${apiKey}&language=en-US`
         var response2 = await fetch(url2);
         var jsonResponse2 = await response2.json();
-        //console.log(jsonResponse2);
         var jr2 = jsonResponse2;
-        //console.log(jr2.results[0].id);
         text.innerHTML = `
         <div>
         <img src="https://image.tmdb.org/t/p/w500/${jr.backdrop_path}" alt="Backdrop of ${jr.original_title}">
@@ -140,16 +127,7 @@ async function displayMovie(id) {
   src="https://www.youtube.com/embed/${jr2.results[0].key}"
   frameborder="0"></iframe> </div>
         </div>`;
-        //modal.style.display = "none";
-        //spana.onclick = function() {
-        //  console.log("Hi!");
-        // modal.style.display = "none";
-        // }​;
     }
-    // actualContents.innerHTML +=
-    //     `<div>
-
-    //     </div>`
 }
 
 function generateHTML(el, id) {
@@ -166,11 +144,6 @@ var btn = document.getElementById("myBtn");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-// btn.onclick = function() {
-//     modal.style.display = "block";
-// }
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
