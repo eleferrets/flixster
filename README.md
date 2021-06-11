@@ -2,7 +2,7 @@
 
 Submitted by: **Brian Balthazar**
 
-Estimated time spent: **11** hours spent in total
+Estimated time spent: **13** hours spent in total
 Deployed Application (optional): [Flixster Deployed Site](https://eleferrets.github.io/flixster/)
 
 ### Application Features
@@ -19,10 +19,10 @@ Deployed Application (optional): [Flixster Deployed Site](https://eleferrets.git
 #### STRETCH FEATURES
 
 - [x] Deploy website using GitHub Pages. 
-- [ ] Allow user to view more details about a movie within a popup.
-- [ ] Improve the user experience through CSS & animation.
-- [ ] Allow movie video trailers to be played using [embedded YouTube](https://support.google.com/youtube/answer/171780?hl=en)
-- [ ] Implement anything else that you can get done to improve the app functionality!
+- [x] Allow user to view more details about a movie within a popup.
+- [x] Improve the user experience through CSS & animation.
+- [x] Allow movie video trailers to be played using [embedded YouTube](https://support.google.com/youtube/answer/171780?hl=en)
+- [x] Implement anything else that you can get done to improve the app functionality!
 
 ### Walkthough GIF
 
@@ -40,7 +40,7 @@ I would have added animations and improved on formatting if I had more time. Nex
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+Everything went incredibly well except for the popup working in time. I saw a nice image carousel that might be cool to implement next time.
 
 ### Open-source libraries used
 
@@ -48,4 +48,4 @@ Add your response here
 
 ### Shout out
 
-I would like to shout out all the TAs as they were very helpful giving me feedback and getting my labs to work, which ended up saving me time on my weekly assignment. Thank you so much!
+I would like to shout out all the TAs and the members of my group as they were very helpful giving me feedback and getting my labs to work, which ended up saving me time on my weekly assignment. Thank you so much for all of your help!
