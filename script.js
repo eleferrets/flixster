@@ -18,10 +18,7 @@ var response = "";
 var jsonResponse = "";
 var data = "";
 var hasInput;
-// search input change
-// function search(evt) {
-//     evt.preventDefault();
-// }
+
 searchForm.addEventListener("submit", (evt) => {
     evt.preventDefault();
     // search.addEventListener("search", (evt) => {
@@ -98,7 +95,7 @@ function displayResults(data) {
 
 function displaySearchResults(data) {
     data.forEach(el => {
-        searchGallery.innerHTML += generateHTML(el);
+        searchGallery.innerHTML += generateHTML(el, el.id);
 
     });
 }
@@ -135,7 +132,7 @@ function displayMovie(el) {
 function generateHTML(el, id) {
     return ` <div class = "movie-item popup" onclick = "displayMovie(${id})">
         <img src = "https://image.tmdb.org/t/p/w500/${el.poster_path}" alt = "Gif of ${el.original_title}" class = "movie-img">
-        <div> <span><p>⭐${el.vote_average} </p></span> <p class = "movie-title" >${el.title} </p> </div>
+        <div> <span><p>⭐&nbsp;${el.vote_average} </p></span> <p class = "movie-title" >${el.title} </p> </div>
         </div>`
 }
 // What you need to do

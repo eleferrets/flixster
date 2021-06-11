@@ -22,11 +22,11 @@ margin-bottom: 0.5em;*/
 
 @media only screen and (max-width: 600px) {
     .movie-img {
-        width: 15em;
+        width: 15em !important;
         height: auto;
     }
     .movie-img~div p {
-        font-size: 1.25em;
+        font-size: 1.5em;
     }
 }
 
