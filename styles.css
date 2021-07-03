@@ -177,7 +177,7 @@ body {
   align-items: flex-start;
 }
 .modal-content {
-  border-radius: 10%;
+  border-radius: 5%;
   /* color: yellowgreen; */
   background-color: snow;
 }
