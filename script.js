@@ -8,7 +8,7 @@ const movieContents = document.querySelector(".movie-contents");
 const actualContents = document.querySelector(".actual-contents");
 const returnButton = document.querySelector(".btn-return");
 /* Get the key outta here during commits */
-const apiKey = "8ae472f9540ff81c2afe402c3afea0bb";
+
 const limit = 9;
 const rating = "g";
 var text = document.getElementById("modal-text");
