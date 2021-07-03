@@ -1,180 +1,192 @@
 * {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 0;
-    margin: 0;
-    border-width: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0;
+  margin: 0;
+  border-width: 0;
 }
-
 
 /* Style the search box inside the navigation bar */
 
-.topnav input[type=text] {
-    padding: 0.4em;
-    font-size: 16px;
+.topnav input[type="text"] {
+  padding: 0.4em;
+  font-size: 16px;
 }
-
 
 /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
 
 @media only screen and (max-width: 600px) {
-    .movie-img {
-        width: 15em !important;
-        height: auto;
-    }
-    .movie-img~div p {
-        font-size: 1.5em;
-    }
+  .movie-img {
+    width: 15em !important;
+    height: auto;
+  }
+  .movie-img ~ div p {
+    font-size: 1.5em;
+  }
 }
 
 .search {
-    display: inline-block;
+  display: inline-block;
 }
 
 img {
-    height: 50px;
+  height: 50px;
 }
 
 h2 {
-    color: white;
+  color: white;
 }
 
 body {
-    background-color: #333;
-    min-width: 245px;
+  background-color: #333;
+  min-width: 245px;
 }
 
 .btn {
-    text-align: center;
+  text-align: center;
 }
 
 main h2 {
-    padding-top: 2.5em;
-    padding-bottom: 0.25em;
+  padding-top: 2.5em;
+  padding-bottom: 0.25em;
 }
 
 .btn-movies {
-    color: white;
-    background-color: black;
-    padding: 1em 1em;
+  color: white;
+  background-color: black;
+  padding: 1em 1em;
 }
 
 .hidden {
-    display: none !important;
+  display: none !important;
 }
 
 .movie-img {
-    width: 12.5em;
-    height: auto;
+  width: 12.5em;
+  height: auto;
 }
-
 
 /* Special selectors */
 
-
 /* Get the image of the star inside each div */
 
-.movie-img~div img {
-    width: 1.875em;
-    height: 1.875em;
+.movie-img ~ div img {
+  width: 1.875em;
+  height: 1.875em;
 }
 
-.movie-img~div {
-    color: wheat;
+.movie-img ~ div {
+  color: wheat;
 }
 
-.movie-img~div p {
-    max-width: 200px;
-    word-wrap: break-word;
+.movie-img ~ div p {
+  max-width: 200px;
+  word-wrap: break-word;
 }
 
-.movie-img~div span {
-    display: inline;
+.movie-img ~ div span {
+  display: inline;
 }
 
-.movie-img~div span+p {
-    padding-left: 0.25em;
+.movie-img ~ div span + p {
+  padding-left: 0.25em;
 }
-
 
 /* Make the button a bit lower */
 
 .btn-form {
-    margin: 1em;
+  margin: 1em;
 }
-
 
 /* Handles the grid without media queries by resizing based on given space */
 
 .col {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 1rem;
 }
-
 
 /* Search bar */
 
 #movie-search {
-    padding: 0.5em;
-    background-color: black;
-    color: white;
-    font-weight: bold;
+  padding: 0.5em;
+  background-color: black;
+  color: white;
+  font-weight: bold;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
-
 
 /* The Modal (background) */
 
 .modal {
-    display: none;
-    /* Hidden by default */
-    position: fixed;
-    /* Stay in place */
-    z-index: 1;
-    /* Sit on top */
-    padding-top: 100px;
-    /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%;
-    /* Full width */
-    height: 100%;
-    /* Full height */
-    overflow: auto;
-    /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0);
-    /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4);
-    /* Black w/ opacity */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
 }
-
 
 /* Modal Content */
 
 .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
 }
-
 
 /* The Close Button */
 
 .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.modal-content {
+  border-radius: 10%;
+  /* color: yellowgreen; */
+  background-color: snow;
+}
+
+.inflex {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
 }
